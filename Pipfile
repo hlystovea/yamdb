@@ -29,7 +29,7 @@ sqlparse = "==0.3.1"
 urllib3 = "==1.25.9"
 wcwidth = "==0.1.9"
 zipp = "==3.1.0"
-Django = "==3.0.5"
+Django = "==3.9.0"
 PyJWT = "==2.0.1"
 gunicorn = "*"
 psycopg2-binary = "*"
@@ -42,4 +42,4 @@ flake8-isort = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.7.4"
