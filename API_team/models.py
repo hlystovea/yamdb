@@ -2,6 +2,7 @@ from django.core import validators
 from django.db import models
 
 from account.models import CustomUser
+
 from .validators import year_validator
 
 

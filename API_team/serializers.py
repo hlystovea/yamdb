@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-
 from rest_framework import serializers, validators
 
 from . import models
@@ -10,8 +9,7 @@ class TitleToReviewDefault:
 
     def __call__(self, serializer_field):
         title_id = serializer_field.context.get('view').kwargs.get('title_id')
-        title = get_object_or_404(models.Title, id=title_id)
-        return title
+        return get_object_or_404(models.Title, id=title_id)
 
 
 class GenreSerializer(serializers.ModelSerializer):
