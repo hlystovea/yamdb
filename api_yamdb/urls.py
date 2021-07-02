@@ -4,7 +4,6 @@ from django.views.generic import TemplateView
 
 from ..API_team.views import index
 
-
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
