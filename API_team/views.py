@@ -1,9 +1,19 @@
 from django.db.models import Avg
+from django.http import HttpResponse
 from django.shortcuts import get_list_or_404, get_object_or_404
 from rest_framework import mixins, permissions, viewsets
 
 from . import filters, models, serializers
 from .permissions import IsAdminAuthorStaffOrReadOnly, IsAdminOrReadOnly
+
+
+def index(request):
+    return HttpResponse(
+        '''Привет, это учебный проект Яндекс.Практикум о \
+           кинематографе, музыке и литературе. API проекта \
+           позволяет вносить данные о произведениях, оставлять \
+           на них рецензии и писать комментарии к рецензиям.'''
+    )
 
 
 class ListCreateDelViewSet(mixins.ListModelMixin,
