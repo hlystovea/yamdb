@@ -7,16 +7,6 @@ from . import filters, models, serializers
 from .permissions import IsAdminAuthorStaffOrReadOnly, IsAdminOrReadOnly
 
 
-def index(request):
-    return HttpResponse(
-        '''Привет, это учебный проект Яндекс.Практикум о \
-           кинематографе, музыке и литературе. API проекта \
-           позволяет вносить данные о произведениях, оставлять \
-           на них рецензии и писать комментарии к рецензиям. \
-           http://84.201.136.23/redoc/'''
-    )
-
-
 class ListCreateDelViewSet(mixins.ListModelMixin,
                            mixins.CreateModelMixin,
                            mixins.DestroyModelMixin,
