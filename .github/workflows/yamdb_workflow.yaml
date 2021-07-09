@@ -30,7 +30,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Changed workdir
-        run: cd ./backend/
+        run: cd backend
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
